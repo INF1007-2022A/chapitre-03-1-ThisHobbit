@@ -28,7 +28,7 @@ def to_degrees(angle_rads: float) -> tuple:
     degs = math.degrees(angle_rads) # Transforme radians en degrés
     mins = (degs - math.floor(degs))* 60 # degrés moins sa partie entière donne le nombre de minute
     secs = (mins - math.floor(mins)) * 60 # minutes moins sa partie entière donne le nombre de secondes
-    return degs, mins, secs
+    return math.floor(degs), math.floor(mins), math.floor(secs)
 
 #test
 
